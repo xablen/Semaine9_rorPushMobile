@@ -1,0 +1,1 @@
+http://127.0.0.1:3000/apps/6/devices/new?key=c9e91b3967c8dce8beff4f447ca02b7f&platform=iOS&version=7.1&uuid=7714-8774&model=iPad3,4&token=c9e91b3967c8dce8beff4f447ca02b7f

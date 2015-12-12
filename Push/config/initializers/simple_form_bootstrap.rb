@@ -1,15 +1,15 @@
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
-  config.wrappers :bootstrap3, tag: 'div', class: 'form-group', error_class:'form-error' do |b|
+  config.wrappers :bootstrap3, tag: 'div', class: 'form-group', error_class: 'form-error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
     b.use :input
-    b.use :error, wrap_with: {tag: 'span', class: 'help-error'}
-    b.use :hint, wrap_with: { tag: 'p', class: 'help-block'}
+    b.use :error, wrap_with: { tag: 'span', class: 'help-error' }
+    b.use :hint, wrap_with: {  tag: 'p', class: 'help-block' }
   end
 
-  config.wrappers :checkbox, tag: 'div', class: 'form-group checkbox', error_class:'form-error' do |b|
+  config.wrappers :checkbox, tag: 'div', class: 'form-group checkbox', error_class: 'form-error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :input
@@ -18,7 +18,7 @@ SimpleForm.setup do |config|
     b.use :hint, wrap_with: { tag: 'p', class: 'help-block'}
   end
 
-    config.wrappers :prepend, tag: 'div', class: 'control-group', error_class:'form-error' do |b|
+    config.wrappers :prepend, tag: 'div', class: 'control-group', error_class: 'form-error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
@@ -26,12 +26,12 @@ SimpleForm.setup do |config|
       input.wrapper tag: 'div', class: 'input-prepend' do |prepend|
         prepend.use :input
       end
-      input.use :hint, wrap_with: { tag: 'span', class: 'help-block'}
-      input.use :error, wrap_with: {tag: 'span', class: 'help-error'}
+      input.use :hint, wrap_with: { tag: 'span', class: 'help-block' }
+      input.use :error, wrap_with: { tag: 'span', class: 'help-error' }
     end
   end
 
-    config.wrappers :append, tag: 'div', class: 'control-group', error_class:'form-error' do |b|
+    config.wrappers :append, tag: 'div', class: 'control-group', error_class: 'form-error' do |b|
     b.use :html5
     b.use :placeholder
     b.use :label
@@ -39,9 +39,9 @@ SimpleForm.setup do |config|
       input.wrapper tag: 'div', class: 'input-append' do |append|
         append.use :input
       end
-      input.use :hint, wrap_with: {tag: 'span', class: 'help-block'}
-      input.use :error, wrap_with: {tag: 'span', class: 'help-error'}
-    end
+      input.use :hint, wrap_with: { tag: 'span', class: 'help-block' }
+      input.use :error, wrap_with: { tag: 'span', class: 'help-error' }
+    end 
   end
 
 

@@ -38,6 +38,8 @@ class AppsController < ApplicationController
   end
 
   def destroy
+      @app.destroy
+      redirect_to apps_path, flash: {success: "L'application #{@app.name} a bien été créée"}
   end
 
   protected
