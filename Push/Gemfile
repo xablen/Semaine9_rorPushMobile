@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
+gem 'rails-i18n', '~> 4.0', '>= 4.0.7'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.3.18'
 # Use SCSS for stylesheets
@@ -39,9 +40,12 @@ gem 'byebug', '~> 8.2', '>= 8.2.1', group: [:development, :test]
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'devise', '~> 3.5', '>= 3.5.2'
-
 gem 'mailcatcher', '~> 0.6.1'
-
-gem 'slim', '~> 3.0', '>= 3.0.6'
-
+gem 'slim-rails', '~> 3.0', '>= 3.0.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5'
+gem 'compass-rails', '~> 1.1.2'
+gem 'simple_form', '~> 3.2'
+gem 'cancan', '~> 1.6', '>= 1.6.10'
+gem 'kaminari', '~> 0.16.3'
+gem 'kaminari-bootstrap', '~> 3.0', '>= 3.0.1'
+gem 'carrierwave', '~> 0.10.0'

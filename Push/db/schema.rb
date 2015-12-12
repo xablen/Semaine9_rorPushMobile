@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151210090246) do
+ActiveRecord::Schema.define(version: 20151211081018) do
+
+  create_table "apps", force: true do |t|
+    t.string   "name"
+    t.integer  "devices_count"
+    t.string   "image"
+    t.string   "certificat_ios"
+    t.string   "token"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "apps", ["user_id"], name: "index_apps_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
