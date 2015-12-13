@@ -7,6 +7,9 @@ class Ability
         can [:show, :edit, :update, :destroy], App, user_id: user.id
         can [:new, :create, :index], App
     end
+
+    can [:new], Device
+    
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

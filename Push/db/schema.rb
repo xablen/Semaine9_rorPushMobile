@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212133745) do
+ActiveRecord::Schema.define(version: 20151213084838) do
 
   create_table "apps", force: true do |t|
     t.string   "name"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 20151212133745) do
     t.string   "uuid"
     t.string   "model"
     t.string   "token"
+    t.integer  "app_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feeds", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "push_date"
     t.integer  "app_id"
     t.datetime "created_at"
     t.datetime "updated_at"

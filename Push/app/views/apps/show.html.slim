@@ -9,19 +9,47 @@ ul
   li <strong>model</strong> iPad3,4
   li <strong>token</strong>
 
+.row
+     .col-sm-6
 
-table.table
-     thead
-	  tr
-	    th Platform
-	    th Version
-	    th Model
-	    th Actions
-      tbody
-  	   - @app.devices.page(params[:page]).find_each do |device|
-	     tr
-	       td = device.platform
-	       td = device.version
-	       td = device.model
-	       td
-	          = link_to "Supprimer", [@app, device], method: :delete, class: "btn btn-danger"
+	    table.table
+	     thead
+		   tr
+		     th Nom
+		     th Flux
+		     th Dernier push
+		     th Actions
+	     tbody
+	  	    - @app.feeds.page.find_each do |feed|
+		     tr
+		       td = feed.name
+		       td = feed.url
+		       td = "Il y a #{time_ago_in_words feed.push_date}"
+		       td
+		       	  = link_to "Editer", edit_app_feed_path(@app, feed), class: "btn btn-primary"
+		       	  '
+		          = link_to "Supprimer", [@app, feed], method: :delete, class: "btn btn-danger"
+
+	  	p = link_to "Ajouter un flux", new_app_feed_path(@app), class: "btn btn-primary"
+
+     .col-sm-6
+
+	     table.table
+	      thead
+		   tr
+		     th Platform
+		     th Version
+		     th Model
+		     th Actions
+	       tbody
+	  	    - @devices.page(params[:page]).find_each do |device|
+		      tr
+		        td = device.platform
+		        td = device.version
+		        td = device.model
+		        td
+		       	   = link_to "Tester", [@app, device], class: "btn btn-primary"
+		       	   '
+		           = link_to "Supprimer", [@app, device], method: :delete, class: "btn btn-danger"
+
+	     = paginate @devices

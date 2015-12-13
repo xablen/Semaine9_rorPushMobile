@@ -1,15 +1,14 @@
 Rails.application.routes.draw do
 
   get 'devices/new'
-
   get 'devices/destroy'
-
-    root 'pages#index'
+  root 'pages#index'
     
     devise_for :users
 
     resources :apps do
-      resources :devices
+      resources :devices, only: [:new, :show, :destroy]
+      resources :feeds
     end
 
   # The priority is based upon order of creation: first created -> highest priority.
